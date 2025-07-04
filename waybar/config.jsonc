@@ -1,0 +1,102 @@
+// vim: ts=4 sts=4 sw=4 et
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // "gtk-layer-shell": "false",
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "tray"],
+    // "modules-center": ["hyprland/window"],
+    "modules-center": ["hyprland/submap"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "pulseaudio", "idle_inhibitor", "clock"],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰈹",
+            "2": "󰈹",
+            "3": " ",
+            "4": " ",
+            // "5": "",
+            // "active": "",
+            "default": "?",
+            // "empty": "",
+            // "persistent": "",
+            // "special": "",
+            "urgent": ""
+        }
+    },
+    "tray": {
+        "spacing": 10
+    },
+    // "hyprland/window: {
+        // "separate-outputs": true,
+        // "icon": true,
+        // "icon-size": 16
+    // },
+    "hyprland/submap": {
+        "format": "󰧹 {}"
+    },
+    "network": {
+        "format-ethernet": "",
+        "format-wifi": "󰖩",
+        "format-linked": "󰌷",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} {essid} ({signalStrength}%)"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+    },
+    "memory": {
+        "format": "{percentage}% ",
+        "tooltip-format": "{used:0.1f} GiB / {total:0.1f} GiB"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-alt": "{volume}% {icon}",
+        "format-alt-click": "click-middle",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "default": ["", "", ""]
+        },
+        "scroll-step": 10,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰒳",
+            "deactivated": "󰒲"
+        }
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%F %T} ",
+        "tooltip-format": "<span color='#c0caf5'><tt><small>{calendar}</small></tt></span>",
+        "calendar": {
+            "mode-mon-col": 4,
+            "weeks-pos": "left",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#bb9af7'><b>{}</b></span>",
+                "weeks": "<span color='#7aa2f7'><b>{}</b></span>",
+                "weekdays": "<span color='#7aa2f7'><b>{}</b></span>",
+                "today": "<span color='#bb9af7'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    }
+}

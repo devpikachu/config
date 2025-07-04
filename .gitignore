@@ -1,0 +1,11 @@
+*
+!/.gitignore
+!/fuzzel
+!/fuzzel/*
+!/hypr
+!/hypr/*
+!/waybar
+!/waybar/*
+!/wezterm
+!/wezterm/*
+!/starship.toml

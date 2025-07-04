@@ -1,0 +1,86 @@
+/*
+ * vim: ts=2 sts=2 sw=2 et
+ */
+
+* {
+  border:        none;
+  border-radius: 0;
+  font-family:   "JetBrainsMono Nerd Font";
+  font-size:     13px;
+  box-shadow:    none;
+  text-shadow:   none;
+  transition-duration: 0s;
+}
+
+window#waybar {
+  background: transparent;
+  color: white;
+}
+
+#workspaces {
+  background-color: #24283b;
+  margin: 5px 0;
+  margin-left: 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+#workspaces button {
+  color: #c0caf5;
+  padding: 5px 10px;
+}
+
+#workspaces button.active {
+  color: #bb9af7;
+}
+
+#workspaces button.focused {
+  color: #24283b;
+  background-color: #7aa2f7;
+  border-radius: 5px;
+}
+
+#workspaces button:hover {
+  color: #24283b;
+  background-color: #7dcfff;
+  border-radius: 5px;
+}
+
+#tray {
+  background-color: #24283b;
+  margin: 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+#tray * {
+  padding: 5px 10px;
+}
+
+#submap {
+  color: #c0caf5;
+  background-color: #24283b;
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#network,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#idle_inhibitor,
+#clock {
+  background-color: #24283b;
+  padding: 5px 10px;
+  margin: 5px 0;
+}
+
+#network {
+  border-radius: 5px 0 0 5px;
+}
+
+#clock {
+  border-radius: 0 5px 5px 0;
+  margin-right: 10px;
+}
+
