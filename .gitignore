@@ -4,6 +4,8 @@
 !/fuzzel/*
 !/hypr
 !/hypr/*
+!/nwg-bar
+!/nwg-bar/*
 !/waybar
 !/waybar/*
 !/wezterm

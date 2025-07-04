@@ -9,7 +9,7 @@
     "modules-left": ["hyprland/workspaces", "tray"],
     // "modules-center": ["hyprland/window"],
     "modules-center": ["hyprland/submap"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "pulseaudio", "idle_inhibitor", "clock"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "pulseaudio", "idle_inhibitor", "clock", "custom/power"],
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -98,5 +98,9 @@
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
         }
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "nwg-bar"
     }
 }

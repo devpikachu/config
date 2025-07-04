@@ -19,9 +19,8 @@ window#waybar {
 
 #workspaces {
   background-color: #24283b;
-  margin: 5px 0;
-  margin-left: 10px;
-  border-radius: 5px 0 0 5px;
+  margin: 5px 10px;
+  border-radius: 5px;
 }
 
 #workspaces button {
@@ -48,7 +47,7 @@ window#waybar {
 #tray {
   background-color: #24283b;
   margin: 5px 0;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
 }
 
 #tray * {
@@ -69,7 +68,8 @@ window#waybar {
 #temperature,
 #pulseaudio,
 #idle_inhibitor,
-#clock {
+#clock,
+#custom-power {
   background-color: #24283b;
   padding: 5px 10px;
   margin: 5px 0;
@@ -79,7 +79,7 @@ window#waybar {
   border-radius: 5px 0 0 5px;
 }
 
-#clock {
+#custom-power {
   border-radius: 0 5px 5px 0;
   margin-right: 10px;
 }
