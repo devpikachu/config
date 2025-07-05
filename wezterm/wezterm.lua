@@ -2,6 +2,10 @@
 local wezterm = require("wezterm") --[[@as Wezterm]]
 local config = wezterm.config_builder()
 
+-- Don't start a login shell by default (what?)
+-- https://wezterm.org/config/launch.html
+config.default_prog = { "/bin/bash" }
+
 -- Set rendering settings
 config.animation_fps = 30
 
